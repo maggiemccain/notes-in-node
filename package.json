@@ -1,0 +1,23 @@
+{
+  "name": "notes-in-node",
+  "version": "1.0.0",
+  "description": "Making a basic notes app in Nodejs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maggiemccain/notes-in-node.git"
+  },
+  "author": "Maggie McCain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maggiemccain/notes-in-node/issues"
+  },
+  "homepage": "https://github.com/maggiemccain/notes-in-node#readme",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "yargs": "^4.7.1"
+  }
+}
