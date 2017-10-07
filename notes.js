@@ -1,5 +1,3 @@
-console.log('Starting notes.js');
-
 const fs = require('fs');
 
 var fetchNotes = () => {
@@ -29,7 +27,8 @@ var addNote = (title, body) => {
     }
 };
 var getAll = () => {
-    console.log('going to list all here')
+    return fetchNotes();
+
 };
 var removeNote = (title) => {
     var notes = fetchNotes();
@@ -38,11 +37,20 @@ var removeNote = (title) => {
     return notes.length !== filteredNotes.length
 };
 var getNote = (title) => {
-    console.log('read ', title)
+    var notes = fetchNotes();
+    notes = notes.filter((note) => note.title === title);
+    return notes[0]
 };
+var logNote = (note) => {
+    debugger
+    console.log('---');
+    console.log(`Title: ${note.title}`);
+    console.log(`Body: ${note.body}`);
+}
 module.exports = {
     addNote, //can use  this whenever the key and value are exact same name ex. addNote: addNote
     getAll,
     removeNote,
-    getNote
+    getNote,
+    logNote
 };
